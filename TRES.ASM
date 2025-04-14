@@ -1,8 +1,13 @@
 title tres.asm Practica de procedimiento
 .model small
 .stack 100h
+.data
+name db "Fernando","$"
 .code 
 main proc
+  mov ax, @data
+  mov ds, ax
+  
   mov dl,'F'
   mov ah, 2
   int 21h
